@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Button</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: FRONT;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .colored-button {
+            background-color: #ff69b8; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            font-size: 33px; /* Tamaño del texto del botón */
+            padding: 20px 40px;
+            border: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        .colored-button:hover {
+            background-color: #ff1493; /* Cambio de color al pasar el mouse */
+        }
+        .message {
+            position: absolute;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .message p {
+            font-size: 24px; /* Tamaño del texto grande */
+            color: #ff007f; /* Color del texto grande */
+            margin-bottom: 10px;
+        }
+        .heart {
+            font-size: 60px; /* Tamaño del corazón */
+            color: #ff007f; /* Color del corazón */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="C:\Users\lopez\Downloads\img.jpg" width="1200" img align=center>
+        <div class="message" id="message" style="display: none;">
+            <div class="heart">&hearts;</div>
+            <p style="color: hotpink;">Te amo mi turronzito de azhucar</p>
+            <p>Te quieres casar conmigo?</p>
+            <button class="colored-button" onclick="showGratitude()">Sí</button>
+            <button class="colored-button" onclick="showNo()">No</button>
+        </div>
+        <div class="message" id="gratitude" style="display: none;">
+            <p>Gracias, me has hecho la mujer más feliz del mundo</p>
+        </div>
+    </div>
+
+    <button class="colored-button" onclick="showMessage()">Click Me</button>
+
+    <script>
+        function showMessage() {
+            var message = document.getElementById("message");
+            message.style.display = "block";
+        }
+
+        function showGratitude() {
+            var gratitude = document.getElementById("gratitude");
+            gratitude.style.display = "block";
+        }
+
+        function showNo() {
+            alert("¡Qué pena! NO TIENES DE OTRA!");
+        }
+    </script>
+</body>
+</html>
